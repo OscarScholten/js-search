@@ -1,0 +1,15 @@
+{
+  "name": "js-search",
+  "version": "0.0.1",
+  "description": "A package for creating perfect search pages in JavaScript",
+  "main": "index.js",
+  "repository": "https://github.com/OscarScholten/js-search",
+  "author": "Oscar Scholten",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-jasmine": "~0.6.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-template-jasmine-istanbul": "~0.3.0"
+  }
+}
