@@ -1,11 +1,12 @@
 <!doctype html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="jsSearchApp">
     <head>
         <meta charset="utf-8">
         <title>JS Search demo page</title>
 
         <!-- Load Angular -->
         <script src="components/angular/angular.js"></script>
+        <script src="scripts/controllers.js"></script>
 
         <!-- Copied from template at http://getbootstrap.com/getting-started/ -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,12 +20,23 @@
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+	<!-- End copy -->
     </head>
     <body>
 	<div class="container-fluid">
-	    <div class="row-fluid">
+	    <div class="row-fluid" ng-controller="QueryFeedbackController">
 		Query: <input ng-model="query" />
-		Output: {{query}}
+		<button ng-click="parse(query)">Search</button>
+		<div>
+		    Query: {{query}}
+		</div>
+		<div>
+		    <ul>
+		   	<li ng-repeat="term in terms">
+			    {{term}}	    
+			</li>
+		    </ul>
+		</div>
 	    </div>
 	</div>
     </body>
